@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.main-layout {
+    display: flex;
+}
+
+/* Default: Dark Theme */
+:root {
+    --background-color: #1e1e2f;
+    --text-color: white;
+    --button-bg: #333;
+    --button-text: white;
+    --button-hover: #555;
+    --border-color: #333;
+    --hover-bg: #2c2c3e;
+}
+
+/* Light Theme */
+.light-theme {
+    --background-color: white;
+    --text-color: black;
+    --button-bg: #ddd;
+    --button-text: black;
+    --button-hover: #bbb;
+    --border-color: #ddd;
+    --hover-bg: #f0f0f0;
+}
+
+/* Apply to the entire app container */
+.app {
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}

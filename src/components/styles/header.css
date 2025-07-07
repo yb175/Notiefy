@@ -1,0 +1,29 @@
+/* Common Layout - Will work for both themes */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.links button {
+    margin-left: 15px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    transition: background-color 0.3s ease;
+}
+
+.links button:hover {
+    background-color: var(--button-hover);
+}

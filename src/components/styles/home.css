@@ -1,0 +1,48 @@
+/* Heading */
+#home-container {
+    margin-left: 220px;  /* Sidebar width + gap */
+    padding: 30px 20px;  /* Top padding 30px, sides 20px */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Search Input */
+.search {
+    width: 85%;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search:focus {
+    border-color: var(--button-hover);
+}
+
+/* Options Buttons Container */
+.options {
+    margin-top: 20px;
+}
+
+.options button {
+    margin-right: 15px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: var(--button-hover);
+}
