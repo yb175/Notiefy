@@ -1,0 +1,88 @@
+.addNote-container {
+    margin-left: 220px; /* Sidebar ka space */
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-height: 100vh;
+}
+
+.addNote-container h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Common Input, Textarea, Select Styling */
+.addNote-container input,
+.addNote-container textarea,
+.addNote-container select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.addNote-container textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.addNote-container input:focus,
+.addNote-container textarea:focus,
+.addNote-container select:focus {
+    border-color: var(--button-hover);
+}
+
+/* Buttons Container */
+.addNote-container .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Create Notebook Button - Left */
+.addNote-container .buttons button:first-child {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    transition: background-color 0.3s ease;
+}
+
+/* Create Note Button - Right */
+.addNote-container .buttons button:last-child {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #e0e7ff;  /* Slightly bluish white as in the image */
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effects */
+.addNote-container .buttons button:hover {
+    background-color: var(--button-hover);
+}
+
+.addNote-container .buttons button:last-child:hover {
+    background-color: #c7d2fe; /* Light blue hover for Create Note button */
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
