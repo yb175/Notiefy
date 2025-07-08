@@ -14,24 +14,28 @@ html, body {
 
 /* Default: Dark Theme */
 :root {
-    --background-color: #1e1e2f;
-    --text-color: white;
-    --button-bg: #333;
-    --button-text: white;
-    --button-hover: #555;
-    --border-color: #333;
-    --hover-bg: #2c2c3e;
+  --background-color: #1e1e2f;
+  --text-color: white;
+  --button-bg: #2a2a3c;
+  --button-text: white;
+  --button-hover: #333;
+  --border-color: #333;
+   --secondary-text-color: #8b949e; /* Muted gray for table headers */
+  --hover-bg-color: #21262d4d;     /* A transparent darker shade for row hover */
+  --page-bg-color: #0d1117;        /* The darkest background for the page itself */
 }
 
-/* Light Theme */
 .light-theme {
-    --background-color: white;
-    --text-color: black;
-    --button-bg: #ddd;
-    --button-text: black;
-    --button-hover: #bbb;
-    --border-color: #ddd;
-    --hover-bg: #f0f0f0;
+  --background-color: white;
+  --text-color: black;
+  --button-bg: #ddd;
+  --button-text: black;
+  --button-hover: #bbb;
+  --border-color: #ccc;
+  /* Additional variables */
+  --secondary-text-color: #57606a;
+  --hover-bg-color: #f6f8fa;
+  --page-bg-color: #f3f4f6;
 }
 
 /* Apply to the entire app container */

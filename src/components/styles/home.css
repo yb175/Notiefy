@@ -2,6 +2,7 @@
 #home-container {
     margin-left: 220px;  /* Sidebar width + gap */
     padding: 30px 20px;  /* Top padding 30px, sides 20px */
+    width: calc(100% - 240px); /* Full width minus sidebar and gap */
 }
 
 h1 {

@@ -1,4 +1,5 @@
 import "../styles/home.css"
+import Note from "../assets/note";
 export default function Home(){
     return(
         <span id="home-container">
@@ -9,6 +10,7 @@ export default function Home(){
                 <button>Recently edited</button>
                 <button>Recently </button>
             </div>
+            <Note></Note>
         </span>
     )
 }
