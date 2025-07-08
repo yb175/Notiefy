@@ -1,6 +1,7 @@
 import { FaStickyNote, FaBook } from 'react-icons/fa';
 import "../styles/sidebar.css"
-
+import {Link} from 'react-router';
+import AddNote from '../pages/addNote';
 export default function Sidebar() {
     return (
         <span className="sidebar">
@@ -14,7 +15,7 @@ export default function Sidebar() {
                     <span>Notebook</span>
                 </li>
             </ul>
-            <button>New Note</button>
+            <Link to="/addNote"><button>New Note</button></Link>
         </span>
     )
 }

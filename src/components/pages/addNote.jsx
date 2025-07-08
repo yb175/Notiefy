@@ -1,23 +1,7 @@
-import { useState,useEffect } from "react"
 import "../styles/addNote.css"
-import { useContext } from "react"
-import notesContext from "../global/notesdata.";
+import useAddNote from "../hooks/createNode";
 export default function AddNote() {
-    const [notes,setNotes] = useContext(notesContext);
-    const [title,setTitle] = useState('');
-    const [content,setContent] = useState('');
-    const [date,setDate] = useState(new Date());
-    const [notebook,setNotebook] = useState('');
-    function saveNote(title,content,date,notebook){
-        const newNote = {title,content,date,notebook};
-        // This is created into new memeory location
-        setNotes([...notes,newNote]);
-
-        setTitle('');
-        setContent('');
-        setDate('');
-        setNotebook('');
-    }
+    const {title,setTitle,content,setContent,date,setDate,notebook,setNotebook,saveNote} = useAddNote();
     return (
        <div className="addNote-container">
            <h1>New Note</h1>

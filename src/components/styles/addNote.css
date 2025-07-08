@@ -1,6 +1,6 @@
 .addNote-container {
     margin-left: 220px; /* Sidebar ka space */
-    padding: 60px 80px;
+    padding: 30px 80px;
     display: flex;
     flex-direction: column;
     max-width: 600px;
@@ -50,6 +50,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    gap: 20px;
 }
 
 /* Create Notebook (Left) */
