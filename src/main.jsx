@@ -7,6 +7,7 @@ import Home from "./components/pages/home.jsx";
 import AddNote from "./components/pages/addNote.jsx";
 import { BrowserRouter, Route, Routes,Link } from "react-router";
 import notesContext  from "./components/global/notesdata..js";
+import CRUD from "./components/pages/crud.jsx";
 export default function App(){
     const [notes,setNotes] = useState([]);
     const [darkTheme,setDarkTheme] = useState(true);
@@ -24,6 +25,7 @@ export default function App(){
                 <Routes>
                    <Route path="/" element={<Home></Home>}></Route>
                    <Route path="/addNote" element={<AddNote></AddNote>}></Route>
+                   <Route path="/crud/:id" element={<CRUD></CRUD>}></Route>
                 </Routes>
             </div>
           </isDarkTheme.Provider>

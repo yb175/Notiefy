@@ -1,8 +1,9 @@
 import { useContext } from "react"
 import notesContext from "../global/notesdata."
 import "../styles/note-table.css"
+import { useNavigate } from "react-router";
 export default function Note(){
-    
+    const navigate = useNavigate();
     const [notes,setNotes] = useContext(notesContext);
     return(
     <div className="note-table">
@@ -13,7 +14,7 @@ export default function Note(){
         </div>
 
       {notes.map((note, i) => (
-       <div className="table-row" key={i}>
+       <div className="table-row" key={note.id} onClick={() => navigate(`/crud/${note.id}`)}>
         <span>{note.title}</span>
         <span>{note.date}</span>
         <span>{note.notebook}</span>

@@ -8,7 +8,7 @@ export default function Home(){
             <div className="options">
                 <button>All notes</button>
                 <button>Recently edited</button>
-                <button>Recently </button>
+                <button>Recently Added</button>
             </div>
             <Note></Note>
         </span>
