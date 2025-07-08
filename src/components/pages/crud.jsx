@@ -17,7 +17,7 @@ export default function CRUD() {
     <div className="my-note-container">
       <div className="note-left">
         <input className="title-box" value={note.title} readOnly={true}/>
-        <input className="content-box" value={note.content} readOnly={true}/>
+        <textarea className="content-box" value={note.content} readOnly={true}/>
         </div>
 
       <div className="button-panel">

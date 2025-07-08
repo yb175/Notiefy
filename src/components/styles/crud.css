@@ -35,17 +35,18 @@
 .content-box {
   width: 80%;
   padding: 25px 30px;
-  border: none;
   background-color: var(--button-bg);
   color: var(--button-text);
+  border: none;
   border-radius: 15px;
   font-size: 18px;
   line-height: 1.8;
   min-height: 300px;
+  resize: none;
   white-space: pre-wrap;
+  overflow-y: auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
 /* Right section: button panel */
 .button-panel {
   width: 200px;
