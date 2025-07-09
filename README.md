@@ -116,6 +116,52 @@ dist/
 * ✅ Unit Testing with Jest (later stage)
 
 ---
+---
+
+### 🗑️ Delete Note – Smooth Navigation Fix
+
+When a user deletes a note, we want them to be immediately redirected to the homepage (/) to prevent them from viewing a now-deleted note.
+
+#### ❌ Initial Implementation (Caused Delay)
+
+Initially, the redirection after deleting a note was handled using a useEffect like this:
+
+js
+const [deleted, setDeleted] = useState(false);
+
+useEffect(() => {
+  if (deleted) {
+    navigate('/');
+  }
+}, [deleted]);
+
+function handleDelete(id) {
+  const newNotes = notes.filter((note) => note.id !== id);
+  setNotes(newNotes);
+  setDeleted(true);
+}
+
+
+**Issue:**
+This approach introduces an unnecessary render cycle. React first updates the state (deleted becomes true), then re-renders the component, and *after that*, the useEffect triggers the navigation. This causes a visible delay during redirection.
+
+---
+
+#### ✅ Optimized Fix – Instant Navigation
+
+To make the delete operation feel smooth and instant, we moved the navigation directly inside the delete handler function:
+
+js
+function handleDelete(id) {
+  const newNotes = notes.filter((note) => note.id !== id);
+  setNotes(newNotes);
+  navigate('/'); // Navigate immediately after deletion
+}
+
+
+This change ensures that the user is redirected as soon as the note is deleted, without waiting for an additional render. It's more responsive and improves the user experience.
+
+---
 
 ## 🙌 **Contribution**
 
