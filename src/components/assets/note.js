@@ -2,9 +2,8 @@ import { useContext } from "react"
 import notesContext from "../global/notesdata."
 import "../styles/note-table.css"
 import { useNavigate } from "react-router";
-export default function Note(){
+export default function Note({notes,setNotes}){
     const navigate = useNavigate();
-    const [notes,setNotes] = useContext(notesContext);
     return(
     <div className="note-table">
         <div className="table-header">
