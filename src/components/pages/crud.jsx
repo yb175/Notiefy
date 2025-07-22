@@ -2,13 +2,18 @@ import { useParams, useNavigate } from "react-router";
 import { useContext, useState, useEffect } from "react";
 import notesContext from "../global/notesdata.";
 import { FaEdit, FaTrash, FaSave } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { addRecentlyDeleted } from "../slice/slice2";
+import { addRecentlyEdited, removeRecentlyEdited } from "../slice/slice1";
+import { useSelector } from "react-redux";
 import "../styles/crud.css";
 
 export default function CRUD() {
   const { id } = useParams();
-  const [notes, setNotes] = useContext(notesContext);
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
+  // Problematic line 👇
+  const [notes, setNotes] = useContext(notesContext);
   const note = notes.find((note) => note.id === id);
 
   const [title, setTitle] = useState("");
@@ -30,6 +35,8 @@ export default function CRUD() {
 
   // Delete Note
   const handleDelete = () => {
+    dispatch(addRecentlyDeleted(note));
+    dispatch(removeRecentlyEdited(note));
     setNotes(notes.filter((n) => n.id !== id));
     navigate("/");
   };
@@ -37,6 +44,7 @@ export default function CRUD() {
     note.title=title;
     note.content=content;
     setNotes([...notes]);
+    dispatch(addRecentlyEdited(note));
     navigate("/");
   }
   return (
